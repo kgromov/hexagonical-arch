@@ -5,11 +5,13 @@ import com.kgromov.application.port.input.OrderProductUseCase;
 import com.kgromov.application.port.input.OrderRequest;
 import com.kgromov.application.port.output.CreateOrderPort;
 import com.kgromov.application.port.output.ProductInventoryPort;
+import org.jmolecules.architecture.hexagonal.Application;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
 @Service
+@Application
 public class OrderProductService implements OrderProductUseCase {
     private ProductInventoryPort productInventoryPort;
     private CreateOrderPort createOrderPort;

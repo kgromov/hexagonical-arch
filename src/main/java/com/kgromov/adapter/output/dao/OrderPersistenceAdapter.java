@@ -6,12 +6,14 @@ import com.kgromov.application.port.output.CreateOrderPort;
 import com.kgromov.application.port.output.LoadOrderPort;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
+import org.jmolecules.architecture.hexagonal.Adapter;
 import org.springframework.stereotype.Service;
 
 import java.text.MessageFormat;
 
 @Service
 @RequiredArgsConstructor
+@Adapter
 public class OrderPersistenceAdapter implements
         LoadOrderPort,
         CreateOrderPort {
